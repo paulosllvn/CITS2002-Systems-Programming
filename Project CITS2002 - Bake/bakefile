@@ -1,0 +1,11 @@
+#dkdjdjdjdjdj
+#date -d "Wed, 24 Oct 2018 15:06:07 GMT" +%s
+#curl -s -v --head http://giulioaur.com 2>&1 | grep '^< Last-Modified:'
+
+CC=cc
+CFLAGS= -std=c99 -Wall -pedantic -Werror -g
+MAIN = main2
+DEPS = parseFile.c fileReader.c variables.c target.c
+
+$(MAIN): $(DEPS)
+	$(CC) $(CFLAGS) -o $(MAIN) $(DEPS)
